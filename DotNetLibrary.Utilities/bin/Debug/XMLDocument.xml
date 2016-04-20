@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetLibrary.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetLibrary.Utilities.Configuration.ConfigurationSections.DatabaseConfigurationSection">
+            <summary>
+            This class allows us to create a new custome database configuration section in the configuration file. 
+            </summary>
+            <example>
+            <configuration>
+                <configSections>
+                    <section name="databasePropertiesSettings" type="DotNetLibrary.Utilities.Configuration.ConfigurationSections.DatabaseConfigurationSection,DotNetLibrary.Utilities, Version=1.0.0.0, Culture=neutral" allowLocation="true" allowDefinition="Everywhere"/>
+                </configSections>
+                <databasePropertiesSettings description="This section contains configuration information about our database such as Stored Procedure names.">
+                    <databaseProperties>
+                        <add name = "OrganisationHierarchyListStoredProcedure" value="Tsa_org_Hierarchy_Export" description="Lists TSA organisation hierarchy." />
+                        <add name = "MaximumNumberOfItemstoReturnFromAllQueries" value="300000" description="This limits the maximum number of items that can be returned by some stored procedures. It's to stop clients from requesting too much data and crashing our servers." />
+                    </databaseProperties>
+               </databasePropertiesSettings>
+            </configuration>
+            </example>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.ConfigurationSections.DatabaseConfigurationSection.Description">
+            <summary>
+            This is the description attibute of the database configuration section
+            </summary>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.ConfigurationSections.DatabaseConfigurationSection.DatabaseConfigurations">
+            <summary>
+            Returns a collection of database configuration properties
+            </summary>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Configuration.DatabaseSettings">
+            <summary>
+             This class allows us to read configuration properties from the custom database section in our config file.
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.DatabaseSettings.#cctor">
+            <summary>
+            Static constructor - reads the section databaseQueriesConfiguration section from the config file and has it ready for use
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.DatabaseSettings.GetSqlQueryElementByName(System.String)">
+            <summary>
+            Searches for a SqlQueryElement by name from the config file
+            </summary>
+            <param name="name">The value of the "name" attribute in one of the child nodes of <sqlQueries /> node e.g. MembersCountStoredProcedure</param>
+            <returns>An SqlQueryElement that is one of the children of the <sqlQueries /> node</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.DatabaseSettings.GetSqlQueryValueByName(System.String)">
+            <summary>
+            Searches for a SqlQueryElement by name from the config section and returns the string value of the Value attribute of that element
+            </summary>
+            <param name="name">The value of the "name" attribute in one of the child nodes of <sqlQueries /> node e.g. OrganisationHierarchyListStoredProcedure</param>
+            <returns>A string which is the value of the Value attribute in the child node in <sqlQueries/> whose name attribute value matches the name argument</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.DatabaseSettings.GetSqlQueryValueAsIntByName(System.String)">
+            <summary>
+            Searches for a SqlQueryElement by name from the config section and returns the string value of the Value attribute of that element as an int
+            </summary>
+            <param name="name">The value of the "name" attribute in one of the child nodes of <sqlQueries /> node e.g. OrganisationHierarchyListStoredProcedure</param>
+            <returns>An integer  converted from the string which is the value of the Value attribute in the child node in <sqlQueries/> whose name attribute value matches the name argument</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.DatabaseSettings.GetSqlQueryDescriptionByName(System.String)">
+            <summary>
+            Searches for a SqlQueryElement by name from the config section and returns the string value of the Description attribute of that element
+            </summary>
+            <param name="name">The value of the "name" attribute in one of the child nodes of <sqlQueries /> node e.g. OrganisationHierarchyListStoredProcedure</param>
+            <returns>A string which is the value of the Description attribute in the child node in <sqlQueries/> whose name attribute value matches the name argument</returns>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElement">
+            <summary>
+            Represents a custom node that can be used to contain custom settings which are related to the database. 
+            </summary>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElement.Name">
+            <summary>
+            Name attribute. This is the Key
+            </summary>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElement.Value">
+            <summary>
+            Value attribute
+            </summary>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElement.Description">
+            <summary>
+            Description attribute. Very useful for documenting the node
+            </summary>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection">
+            <summary>
+            Represents a collection of database properties
+            </summary>
+        </member>
+        <member name="P:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.Item(System.Int32)">
+            <summary>
+            Indexer to return a specific element
+            </summary>
+            <param name="index">The index of the element in the collection</param>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.Clear">
+            <summary>
+            Clears the collection
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.Remove(DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElement)">
+            <summary>
+            Removes the element from the collection.
+            </summary>
+            <param name="databaseConfigurationElement"></param>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes an element at a given index.
+            </summary>
+            <param name="index">The index of the element in the collection.</param>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.Remove(System.String)">
+            <summary>
+            Removes an element by name from the collection.
+            </summary>
+            <param name="name">the key of the element</param>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.CreateNewElement">
+            <summary>
+            Creates a new element
+            </summary>
+            <returns>Returns the newley created element.</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Configuration.Elements.DatabaseConfigurationElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Returns an elemnt's key from the collection
+            </summary>
+            <param name="element">The element we are interested in.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

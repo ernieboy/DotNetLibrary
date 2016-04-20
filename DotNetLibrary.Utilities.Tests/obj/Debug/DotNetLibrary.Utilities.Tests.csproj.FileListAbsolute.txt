@@ -1,0 +1,10 @@
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.dll
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.pdb
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.dll
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\nunit.framework.dll
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.pdb
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\nunit.framework.xml
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.csprojResolveAssemblyReference.cache
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.dll
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.pdb
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.dll.config
