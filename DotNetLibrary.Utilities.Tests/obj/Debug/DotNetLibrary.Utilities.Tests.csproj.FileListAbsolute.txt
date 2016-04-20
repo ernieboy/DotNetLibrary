@@ -1,3 +1,4 @@
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.dll.config
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.dll
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.pdb
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.dll
@@ -7,4 +8,3 @@ C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\nunit.fra
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.csprojResolveAssemblyReference.cache
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.dll
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\obj\Debug\DotNetLibrary.Utilities.Tests.pdb
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities.Tests\bin\Debug\DotNetLibrary.Utilities.Tests.dll.config

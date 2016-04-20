@@ -44,10 +44,10 @@ namespace DotNetLibrary.Utilities.Configuration.ConfigurationSections
         /// Returns a collection of database configuration properties
         /// </summary>
         [ConfigurationProperty("databaseProperties", IsDefaultCollection = false)]
-        [ConfigurationCollection(typeof(DatabaseConfigurationElementCollection),
+        [ConfigurationCollection(typeof(CustomConfigurationElementCollection),
             AddItemName = "add",
             ClearItemsName = "clear",
             RemoveItemName = "remove")]
-        public DatabaseConfigurationElementCollection DatabaseConfigurations => (DatabaseConfigurationElementCollection)base["databaseProperties"];
+        public CustomConfigurationElementCollection CustomConfigurations => (CustomConfigurationElementCollection)base["databaseProperties"];
     }
 }

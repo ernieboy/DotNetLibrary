@@ -5,9 +5,9 @@ using System.Diagnostics.Contracts;
 namespace DotNetLibrary.Utilities.Configuration.Elements
 {
     /// <summary>
-    /// Represents a custom node that can be used to contain custom settings which are related to the database. 
+    /// Represents a custom node that can be used to contain custom settings. 
     /// </summary>
-    public sealed class DatabaseConfigurationElement : ConfigurationElement
+    public sealed class CustomConfigurationElement : ConfigurationElement   
     {
         /// <summary>
         /// Name attribute. This is the Key
@@ -41,18 +41,18 @@ namespace DotNetLibrary.Utilities.Configuration.Elements
     }
 
     /// <summary>
-    /// Represents a collection of database properties
+    /// Represents a collection of custom configuration properties
     /// </summary>
-    public class DatabaseConfigurationElementCollection : ConfigurationElementCollection
+    public sealed class CustomConfigurationElementCollection : ConfigurationElementCollection  
     {
 
         /// <summary>
         /// Indexer to return a specific element
         /// </summary>
         /// <param name="index">The index of the element in the collection</param>
-        public DatabaseConfigurationElement this[int index]
+        public CustomConfigurationElement this[int index]
         {
-            get { return (DatabaseConfigurationElement)BaseGet(index); }
+            get { return (CustomConfigurationElement)BaseGet(index); }
             set
             {
                 Contract.Requires<ArgumentNullException>(value != null);
@@ -75,11 +75,11 @@ namespace DotNetLibrary.Utilities.Configuration.Elements
         /// <summary>
         /// Removes the element from the collection.
         /// </summary>
-        /// <param name="databaseConfigurationElement"></param>
-        public void Remove(DatabaseConfigurationElement databaseConfigurationElement)
+        /// <param name="customConfigurationElement"></param>
+        public void Remove(CustomConfigurationElement customConfigurationElement)
         {
-            Contract.Requires<ArgumentNullException>(databaseConfigurationElement != null);
-            BaseRemove(databaseConfigurationElement.Name);
+            Contract.Requires<ArgumentNullException>(customConfigurationElement != null);
+            BaseRemove(customConfigurationElement.Name);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace DotNetLibrary.Utilities.Configuration.Elements
         /// <returns>Returns the newley created element.</returns>
         protected override ConfigurationElement CreateNewElement()
         {
-            return new DatabaseConfigurationElement();
+            return new CustomConfigurationElement();
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace DotNetLibrary.Utilities.Configuration.Elements
         /// <returns></returns>
         protected override object GetElementKey(ConfigurationElement element)
         {
-            return ((DatabaseConfigurationElement)element).Name;
+            return ((CustomConfigurationElement)element).Name;
         }
     }
 }
