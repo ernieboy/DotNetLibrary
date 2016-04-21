@@ -17,7 +17,7 @@ namespace DotNetLibrary.Utilities.Configuration
         private  readonly CustomAppSettingsConfigurationSection _customAppSettingsConfigurationSection; 
 
         /// <summary>
-        /// Static constructor - reads the custom configuration sections from the config file and has it ready for use
+        /// Default constructor - reads the custom configuration sections from the config file and has it ready for use
         /// </summary>
         public  CustomConfigurationSettings()
         {
