@@ -4,3 +4,4 @@ C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\bin\Release\DotNetLibrary
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Release\DotNetLibrary.Utilities.rewritten
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Release\DotNetLibrary.Utilities.dll
 C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Release\DotNetLibrary.Utilities.pdb
+C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Release\DotNetLibrary.Utilities.csprojResolveAssemblyReference.cache

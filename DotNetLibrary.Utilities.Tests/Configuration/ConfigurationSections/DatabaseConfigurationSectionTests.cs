@@ -10,15 +10,16 @@ namespace DotNetLibrary.Utilities.Tests.Configuration.ConfigurationSections
         public void TestIfWeCanReadTheCustomDatabasePropertiesFromTheConfigurationFile()
         {
             //Arrange
+            ICustomConfigurationSettings customSettings = new CustomConfigurationSettings();
 
             //Act
-            string queryOneValue = CustomConfigurationSettings.GetElementValueByName("CustomQuery1", CustomSections.Database);
-            string queryOneDescription = CustomConfigurationSettings.GetElementDescriptionByName("CustomQuery1", CustomSections.Database);
+            string queryOneValue = customSettings.GetElementValueByName("CustomQuery1", CustomSections.Database);
+            string queryOneDescription = customSettings.GetElementDescriptionByName("CustomQuery1", CustomSections.Database);
 
             int maximumNumberOfItemstoReturnFromAllQueries =
-                CustomConfigurationSettings.GetElementValueAsIntByName("MaximumNumberOfItemstoReturnFromAllQueries", CustomSections.Database);
+                customSettings.GetElementValueAsIntByName("MaximumNumberOfItemstoReturnFromAllQueries", CustomSections.Database);
             string maximumNumberOfItemstoReturnFromAllQueriesDescription =
-                CustomConfigurationSettings.GetElementDescriptionByName("MaximumNumberOfItemstoReturnFromAllQueries", CustomSections.Database);
+                customSettings.GetElementDescriptionByName("MaximumNumberOfItemstoReturnFromAllQueries", CustomSections.Database);
 
 
             //Assert
@@ -34,11 +35,12 @@ namespace DotNetLibrary.Utilities.Tests.Configuration.ConfigurationSections
         public void TestIfWeCanReadTheCustomPropertiesFromTheConfigurationFile()    
         {
             //Arrange
+            ICustomConfigurationSettings customSettings = new CustomConfigurationSettings();
 
             //Act
-            string searchUrlValue = CustomConfigurationSettings.GetElementValueByName("SearchUrl", CustomSections.AppSettings);
-            int mailServerPort = CustomConfigurationSettings.GetElementValueAsIntByName("MailServerPort", CustomSections.AppSettings);
-            string mailServerPortDescription = CustomConfigurationSettings.GetElementDescriptionByName("MailServerPort", CustomSections.AppSettings);
+            string searchUrlValue = customSettings.GetElementValueByName("SearchUrl", CustomSections.AppSettings);
+            int mailServerPort = customSettings.GetElementValueAsIntByName("MailServerPort", CustomSections.AppSettings);
+            string mailServerPortDescription = customSettings.GetElementDescriptionByName("MailServerPort", CustomSections.AppSettings);
 
             //Assert
             Assert.That(searchUrlValue, Is.EqualTo("http://www.google.com?search=computers"));

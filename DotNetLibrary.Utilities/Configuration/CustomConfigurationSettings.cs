@@ -11,23 +11,23 @@ namespace DotNetLibrary.Utilities.Configuration
     /// <summary>
     ///  This class allows us to read configuration properties from the custom configuration sections in our config file.
     /// </summary>
-    public static class CustomConfigurationSettings
+    public  class CustomConfigurationSettings : ICustomConfigurationSettings
     {
-        private static readonly DatabaseConfigurationSection DatabaseConfigurationSection;
-        private static readonly CustomAppSettingsConfigurationSection CustomAppSettingsConfigurationSection;
+        private  readonly DatabaseConfigurationSection _databaseConfigurationSection;
+        private  readonly CustomAppSettingsConfigurationSection _customAppSettingsConfigurationSection; 
 
         /// <summary>
         /// Static constructor - reads the custom configuration sections from the config file and has it ready for use
         /// </summary>
-        static CustomConfigurationSettings()
+        public  CustomConfigurationSettings()
         {
-            DatabaseConfigurationSection =
+            _databaseConfigurationSection =
                (DatabaseConfigurationSection)ConfigurationManager.GetSection("databasePropertiesSettings");
-            Debug.Assert(DatabaseConfigurationSection != null, "DatabaseConfigurationSection may not be null.");
+            Debug.Assert(_databaseConfigurationSection != null, "_databaseConfigurationSection may not be null.");
 
-            CustomAppSettingsConfigurationSection =
+            _customAppSettingsConfigurationSection =
                (CustomAppSettingsConfigurationSection)ConfigurationManager.GetSection("customAppSettings");
-            Debug.Assert(CustomAppSettingsConfigurationSection != null, "CustomAppSettingsConfigurationSection may not be null.");
+            Debug.Assert(_customAppSettingsConfigurationSection != null, "_customAppSettingsConfigurationSection may not be null.");
         }
 
         /// <summary>
@@ -36,22 +36,22 @@ namespace DotNetLibrary.Utilities.Configuration
         /// <param name="name">The Value of the "name" attribute in one of the child nodes of the custom configuration section.</param>
         /// <param name="section">The custom configuration section we are interested in.</param>
         /// <returns>An CustomConfigurationElement whose name key Value matches the supplied name</returns>
-        private static CustomConfigurationElement GetConfigurationElementByName(string name, CustomSections section)
+        private  CustomConfigurationElement GetConfigurationElementByName(string name, CustomSections section)
         {
             Contract.Requires<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), "Preconditions, name parameter may not be null.");
-            Contract.Requires<ArgumentNullException>(DatabaseConfigurationSection != null, "Preconditions, DatabaseConfigurationSection may not be null.");
-            Contract.Requires<ArgumentNullException>(CustomAppSettingsConfigurationSection != null, 
-                "Preconditions, CustomAppSettingsConfigurationSection may not be null.");
+            Contract.Requires<ArgumentNullException>(_databaseConfigurationSection != null, "Preconditions, _databaseConfigurationSection may not be null.");
+            Contract.Requires<ArgumentNullException>(_customAppSettingsConfigurationSection != null,
+                "Preconditions, _customAppSettingsConfigurationSection may not be null.");
 
             CustomConfigurationElement element = null;
             switch (section)
             {
                 case CustomSections.Database:
-                    element = DatabaseConfigurationSection.CustomConfigurations.Cast<CustomConfigurationElement>().
+                    element = _databaseConfigurationSection.CustomConfigurations.Cast<CustomConfigurationElement>().
                 Single(e => e.Name == name.Trim());
                     break;
                 case CustomSections.AppSettings:
-                    element = CustomAppSettingsConfigurationSection.CustomConfigurations.Cast<CustomConfigurationElement>().
+                    element = _customAppSettingsConfigurationSection.CustomConfigurations.Cast<CustomConfigurationElement>().
                 Single(e => e.Name == name.Trim());
                     break;
             }
@@ -64,7 +64,7 @@ namespace DotNetLibrary.Utilities.Configuration
         /// <param name="uniqueKey">The key of the the child node we are interested in.</param>
         /// <param name="section">The custom configuration section we are interested in.</param>
         /// <returns>The Value attribute of the node which matches the key we are interested in.</returns>
-        public static string GetElementValueByName(string uniqueKey, CustomSections section) 
+        public  string GetElementValueByName(string uniqueKey, CustomSections section) 
         {
             Contract.Requires<ArgumentNullException>(!string.IsNullOrWhiteSpace(uniqueKey), "Preconditions, name parameter may not be null.");
 
@@ -80,7 +80,7 @@ namespace DotNetLibrary.Utilities.Configuration
         /// <param name="uniqueKey">The key of the the child node we are interested in.</param>
         /// <param name="section">The custom configuration section we are interested in.</param>
         /// <returns>An integer converted from the Value attribute of the node which matches the key we are interested in.</returns>
-        public static int GetElementValueAsIntByName(string uniqueKey, CustomSections section)   
+        public  int GetElementValueAsIntByName(string uniqueKey, CustomSections section)   
         {
             Contract.Requires<ArgumentNullException>(!string.IsNullOrWhiteSpace(uniqueKey), "Preconditions, name parameter may not be null.");
             string value = GetElementValueByName(uniqueKey, section);
@@ -94,7 +94,7 @@ namespace DotNetLibrary.Utilities.Configuration
         /// <param name="uniqueKey">The key of the the child node we are interested in.</param>
         /// <param name="section">The custom configuration section we are interested in.</param>
         /// <returns>The Description attribute value of the node which matches the key we are interested in.</returns>
-        public static string GetElementDescriptionByName(string uniqueKey, CustomSections section)   
+        public  string GetElementDescriptionByName(string uniqueKey, CustomSections section)   
         {
             Contract.Requires<ArgumentNullException>(!string.IsNullOrWhiteSpace(uniqueKey), "Preconditions, name parameter may not be null.");
 

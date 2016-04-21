@@ -136,6 +136,7 @@
     <Compile Include="Configuration\ConfigurationSections\DatabaseConfigurationSection.cs" />
     <Compile Include="Configuration\CustomConfigurationSettings.cs" />
     <Compile Include="Configuration\Elements\CustomConfigurationElement.cs" />
+    <Compile Include="Configuration\ICustomConfigurationSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
