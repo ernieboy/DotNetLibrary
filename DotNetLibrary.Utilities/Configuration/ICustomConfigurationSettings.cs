@@ -1,5 +1,8 @@
 ﻿namespace DotNetLibrary.Utilities.Configuration
 {
+    /// <summary>
+    /// Interface for interacting with a custom configuration section
+    /// </summary>
     public interface ICustomConfigurationSettings
     {
         /// <summary>
