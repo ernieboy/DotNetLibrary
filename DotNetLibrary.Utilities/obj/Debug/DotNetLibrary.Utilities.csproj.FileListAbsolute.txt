@@ -1,8 +1,0 @@
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\bin\Debug\DotNetLibrary.Utilities.dll.config
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\bin\Debug\DotNetLibrary.Utilities.dll
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\bin\Debug\DotNetLibrary.Utilities.pdb
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\bin\Debug\XMLDocument.xml
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Debug\DotNetLibrary.Utilities.rewritten
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Debug\DotNetLibrary.Utilities.dll
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Debug\DotNetLibrary.Utilities.pdb
-C:\data\projects\DotNetLibrary\DotNetLibrary.Utilities\obj\Debug\DotNetLibrary.Utilities.csprojResolveAssemblyReference.cache

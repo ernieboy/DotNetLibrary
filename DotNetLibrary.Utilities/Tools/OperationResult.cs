@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DotNetLibrary.Utilities.Utilitis
+namespace DotNetLibrary.Utilities.Tools
 {
     /// <summary>
     /// An OperationResult object is useful when you perform an operation and you need to return multiple  pieces of data from the operation

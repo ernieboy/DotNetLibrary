@@ -137,8 +137,10 @@
     <Compile Include="Configuration\CustomConfigurationSettings.cs" />
     <Compile Include="Configuration\Elements\CustomConfigurationElement.cs" />
     <Compile Include="Configuration\ICustomConfigurationSettings.cs" />
+    <Compile Include="Tools\FileUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilitis\OperationResult.cs" />
+    <Compile Include="Tools\DateUtils.cs" />
+    <Compile Include="Tools\OperationResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
