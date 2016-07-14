@@ -215,6 +215,44 @@
             <param name="section">The custom configuration section we are interested in.</param>
             <returns>The Description attribute value of the node which matches the key we are interested in.</returns>
         </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.ErrorsUtils">
+            <summary>
+            A utitlity class to help with error handling
+            </summary>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin">
+            <summary>
+            The origin of the error
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.Database">
+            <summary>
+            Error that originated from database
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.EntityFrameworkValidationFailure">
+            <summary>
+             Error that originated from Entity Framework entity validation failure
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.FileAccessFailure">
+            <summary>
+             Error that originated from trying to access a file
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.Other">
+            <summary>
+             Any other unspecified error
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.ErrorsUtils.BuildExceptionDetail(System.Exception,System.Text.StringBuilder)">
+            <summary>
+                Returns full details about an Exception object
+            </summary>
+            <param name="ex">The Exception object which was thrown when the error occurred</param>
+            <param name="sb">A string builder object to build the final error message string</param>
+            <returns>A string builder object which contains the final error message</returns>
+        </member>
         <member name="T:DotNetLibrary.Utilities.Tools.FileUtils">
             <summary>
             
