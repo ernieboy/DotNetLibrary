@@ -32,9 +32,5 @@ namespace DotNetLibrary.Utilities.Tests.Tools.Extensions
             Assert.That(parsed != DateTime.MinValue);
             Assert.That(parsed.Year, Is.EqualTo(2008));
         }
-
-
-
-
     }
 }
