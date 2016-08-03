@@ -13,5 +13,13 @@ namespace DotNetLibrary.Utilities.Tests.Tools.Extensions
             // ReSharper disable once ExpressionIsAlwaysNull
            Assert.That(myString.IsNullOrWhiteSpace(), Is.True );
         }
+
+        [Test]
+        public void IsParsableAsValidMsSqlServerDateTest1()
+        {
+            string someString = "12/09/9999 12:23:55";
+            bool result = someString.IsParsableAsValidMsSqlServerDate();
+            Assert.That(result, Is.True);
+        }
     }
 }

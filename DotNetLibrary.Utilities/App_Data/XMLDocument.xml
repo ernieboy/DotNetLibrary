@@ -296,10 +296,17 @@
         </member>
         <member name="M:DotNetLibrary.Utilities.Tools.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
             <summary>
-            
+            Determines if a given string is null, empty or consists only of white space. 
             </summary>
-            <param name="targetString"></param>
-            <returns></returns>
+            <param name="targetString">The string to test</param>
+            <returns>True if the string is null, empty or consists of only whitespace</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.StringExtensions.IsParsableAsValidMsSqlServerDate(System.String)">
+            <summary>
+            Determines if a given string is parsable as a valid Microsoft SQL Server date within the range 1753 and 9999.
+            </summary>
+            <param name="stringValue">The string to test</param>
+            <returns>True if the string can be converted to a valid MS SQL Server date.</returns>
         </member>
         <member name="T:DotNetLibrary.Utilities.Tools.FileUtils">
             <summary>
