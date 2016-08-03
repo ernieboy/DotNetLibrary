@@ -17,7 +17,6 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
         /// <returns>A nullable DateTime instance</returns>
         public static DateTime ParseBritishDateFromString(this DateTime dateTime, string dateString)
         {
-            if (dateString.IsNullOrWhiteSpace()) throw Error.ArgumentNull(nameof(dateString));
             DateTime toReturn = DateTime.MinValue;
             try
             {
@@ -38,7 +37,6 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
         /// <returns>A nullable DateTime instance</returns>
         public static DateTime ParseBritishDateFromAmericanDateString(this DateTime dateTime, string dateString)
         {
-            if (dateString.IsNullOrWhiteSpace()) throw Error.ArgumentNull(nameof(dateString));
             DateTime toReturn = DateTime.MinValue;
             try
             {
@@ -61,7 +59,6 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
         /// <returns>A nullable DateTime instance</returns>
         public static DateTime ParseBritishDateFromShortAmericanDateString(this DateTime dateTime, string dateString)
         {
-            if (dateString.IsNullOrWhiteSpace()) throw Error.ArgumentNull(nameof(dateString));
             DateTime toReturn = DateTime.MinValue;
             try
             {
