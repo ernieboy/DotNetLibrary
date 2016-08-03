@@ -215,43 +215,91 @@
             <param name="section">The custom configuration section we are interested in.</param>
             <returns>The Description attribute value of the node which matches the key we are interested in.</returns>
         </member>
-        <member name="T:DotNetLibrary.Utilities.Tools.ErrorsUtils">
+        <member name="T:DotNetLibrary.Utilities.Tools.Error">
             <summary>
             A utitlity class to help with error handling
             </summary>
         </member>
-        <member name="T:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin">
+        <member name="M:DotNetLibrary.Utilities.Tools.Error.ArgumentNull(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.Error.ErrorOrigin">
             <summary>
             The origin of the error
             </summary>
         </member>
-        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.Database">
+        <member name="F:DotNetLibrary.Utilities.Tools.Error.ErrorOrigin.Database">
             <summary>
             Error that originated from database
             </summary>
         </member>
-        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.EntityFrameworkValidationFailure">
+        <member name="F:DotNetLibrary.Utilities.Tools.Error.ErrorOrigin.EntityFrameworkValidationFailure">
             <summary>
              Error that originated from Entity Framework entity validation failure
             </summary>
         </member>
-        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.FileAccessFailure">
+        <member name="F:DotNetLibrary.Utilities.Tools.Error.ErrorOrigin.FileAccessFailure">
             <summary>
              Error that originated from trying to access a file
             </summary>
         </member>
-        <member name="F:DotNetLibrary.Utilities.Tools.ErrorsUtils.ErrorOrigin.Other">
+        <member name="F:DotNetLibrary.Utilities.Tools.Error.ErrorOrigin.Other">
             <summary>
              Any other unspecified error
             </summary>
         </member>
-        <member name="M:DotNetLibrary.Utilities.Tools.ErrorsUtils.BuildExceptionDetail(System.Exception,System.Text.StringBuilder)">
+        <member name="M:DotNetLibrary.Utilities.Tools.Error.BuildExceptionDetail(System.Exception,System.Text.StringBuilder)">
             <summary>
                 Returns full details about an Exception object
             </summary>
             <param name="ex">The Exception object which was thrown when the error occurred</param>
             <param name="sb">A string builder object to build the final error message string</param>
             <returns>A string builder object which contains the final error message</returns>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromString(System.DateTime,System.String)">
+            <summary>
+            Constructs a British DateTime instance by parsing a string that contains the date e.g 19/11/2008 or 19/11/08 etc
+            </summary>
+            <param name="dateTime">The type we are extending with this method</param>
+            <param name="dateString">The string to parse in order to build the date</param>
+            <returns>A nullable DateTime instance</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromAmericanDateString(System.DateTime,System.String)">
+            <summary>
+            Constructs a British DateTime instance by parsing a string that contains a American date format e.g 11/19/2008
+            </summary>
+            <param name="dateTime">The type we are extending with this method</param>
+            <param name="dateString">The string to parse in order to build the date</param>
+            <returns>A nullable DateTime instance</returns>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromShortAmericanDateString(System.DateTime,System.String)">
+            <summary>
+            Constructs a British DateTime instance by parsing a string that contains a short American date format e.g 11/19/08
+            </summary>
+            <param name="dateTime">The type we are extending with this method</param>
+            <param name="dateString">The string to parse in order to build the date</param>
+            <returns>A nullable DateTime instance</returns>
+        </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.Extensions.StringExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="targetString"></param>
+            <returns></returns>
         </member>
         <member name="T:DotNetLibrary.Utilities.Tools.FileUtils">
             <summary>

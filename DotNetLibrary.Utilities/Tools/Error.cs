@@ -6,8 +6,16 @@ namespace DotNetLibrary.Utilities.Tools
     /// <summary>
     /// A utitlity class to help with error handling
     /// </summary>
-    public class ErrorsUtils
+    public class Error  
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static Exception ArgumentNull(string s) => new ArgumentNullException(s);
+
         /// <summary>
         /// The origin of the error
         /// </summary>

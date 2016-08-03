@@ -137,7 +137,9 @@
     <Compile Include="Configuration\CustomConfigurationSettings.cs" />
     <Compile Include="Configuration\Elements\CustomConfigurationElement.cs" />
     <Compile Include="Configuration\ICustomConfigurationSettings.cs" />
-    <Compile Include="Tools\ErrorsUtils.cs" />
+    <Compile Include="Tools\Error.cs" />
+    <Compile Include="Tools\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Tools\Extensions\StringExtensions.cs" />
     <Compile Include="Tools\FileUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\DateUtils.cs" />

@@ -90,16 +90,18 @@
   <ItemGroup>
     <Compile Include="Configuration\ConfigurationSections\DatabaseConfigurationSectionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Extensions\DateTimeExtensionsTests.cs" />
+    <Compile Include="Tools\Extensions\StringExtensionsTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetLibrary.Utilities\DotNetLibrary.Utilities.csproj">
       <Project>{d91342a5-a8dc-4b15-98df-a69f77cef6a7}</Project>
       <Name>DotNetLibrary.Utilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
