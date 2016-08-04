@@ -215,6 +215,16 @@
             <param name="section">The custom configuration section we are interested in.</param>
             <returns>The Description attribute value of the node which matches the key we are interested in.</returns>
         </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.Culture">
+            <summary>
+            Class that deals with cultures
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.Culture.BritishCulture">
+            <summary>
+            British culture
+            </summary>
+        </member>
         <member name="T:DotNetLibrary.Utilities.Tools.DateFormat">
             <summary>
             Class that contains date formats constants 
