@@ -42,7 +42,7 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
             try
             {
                 DateTime dt = DateTime.ParseExact(dateString, sourceStringDateFormat, CultureInfo.InvariantCulture);
-                string formattedDate = dt.ToString("dd/MM/yyyy");
+                string formattedDate = dt.ToString(DateFormat.BritishWithSlashSparator);
                 toReturn = DateTime.Parse(formattedDate, new CultureInfo("en-GB"));
                 return toReturn;
             }
@@ -64,8 +64,8 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
             DateTime toReturn = DateTime.MinValue;
             try
             {
-                DateTime dt = DateTime.ParseExact(dateString, "MM/dd/yy", CultureInfo.InvariantCulture);
-                string formattedDate = dt.ToString("dd/MM/yyyy");
+                DateTime dt = DateTime.ParseExact(dateString, sourceStringDateFormat, CultureInfo.InvariantCulture);
+                string formattedDate = dt.ToString(DateFormat.BritishWithSlashSparator);
                 toReturn = DateTime.Parse(formattedDate, new CultureInfo("en-GB"));
                 return toReturn;
             }
