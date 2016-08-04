@@ -215,6 +215,41 @@
             <param name="section">The custom configuration section we are interested in.</param>
             <returns>The Description attribute value of the node which matches the key we are interested in.</returns>
         </member>
+        <member name="T:DotNetLibrary.Utilities.Tools.DateFormat">
+            <summary>
+            Class that contains date formats constants 
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.BritishWithSlashSparator">
+            <summary>
+            British date format using slash as separator (dd/MM/yyyy) e.g. 23/06/1977 
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.BritishWithHyphenSeparator">
+            <summary>
+            British date format using hyphen as separator (dd-MM-yyyy) e.g. 23-06-1977
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.AmericanTwoDigitsYearWithSlashSparator">
+            <summary>
+            American date format with two digits for the year using slash separator (MM/dd/yy) e.g 01/23/61 
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.AmericanTwoDigitsYearWithHyphenSparator">
+            <summary>
+            American date format with two digits for the year using hyphen separator (MM-dd-yy) e.g 01-23-61 
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.AmericanFourDigitsYearWithSlashSparator">
+            <summary>
+            American date format with four digits for the year using slash separator (MM/dd/yyyy) e.g 01/23/1961 
+            </summary>
+        </member>
+        <member name="F:DotNetLibrary.Utilities.Tools.DateFormat.AmericanFourDigitsYearWithHyphenSparator">
+            <summary>
+            American date format with four digits for the year using hyphen separator (MM-dd-yyyy) e.g 01-23-1961 
+            </summary>
+        </member>
         <member name="T:DotNetLibrary.Utilities.Tools.Error">
             <summary>
             A utitlity class to help with error handling
@@ -273,20 +308,22 @@
             <param name="dateString">The string to parse in order to build the date</param>
             <returns>A nullable DateTime instance</returns>
         </member>
-        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromAmericanDateString(System.DateTime,System.String)">
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromAmericanDateString(System.DateTime,System.String,System.String)">
             <summary>
             Constructs a British DateTime instance by parsing a string that contains a American date format e.g 11/19/2008
             </summary>
             <param name="dateTime">The type we are extending with this method</param>
             <param name="dateString">The string to parse in order to build the date</param>
+            <param name="sourceStringDateFormat">The date format of the string to be parsed e.g. MM/dd/yyyy or MM-dd-yyyy </param>
             <returns>A nullable DateTime instance</returns>
         </member>
-        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromShortAmericanDateString(System.DateTime,System.String)">
+        <member name="M:DotNetLibrary.Utilities.Tools.Extensions.DateTimeExtensions.ParseBritishDateFromShortAmericanDateString(System.DateTime,System.String,System.String)">
             <summary>
             Constructs a British DateTime instance by parsing a string that contains a short American date format e.g 11/19/08
             </summary>
             <param name="dateTime">The type we are extending with this method</param>
             <param name="dateString">The string to parse in order to build the date</param>
+            <param name="sourceStringDateFormat">The date format of the string to be parsed e.g. MM/dd/yy or MM-dd-yy</param>
             <returns>A nullable DateTime instance</returns>
         </member>
         <member name="T:DotNetLibrary.Utilities.Tools.Extensions.StringExtensions">

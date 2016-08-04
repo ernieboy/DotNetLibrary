@@ -34,13 +34,14 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
         /// </summary>
         /// <param name="dateTime">The type we are extending with this method</param>
         /// <param name="dateString">The string to parse in order to build the date</param>
+        /// <param name="sourceStringDateFormat">The date format of the string to be parsed e.g. MM/dd/yyyy or MM-dd-yyyy </param>
         /// <returns>A nullable DateTime instance</returns>
-        public static DateTime ParseBritishDateFromAmericanDateString(this DateTime dateTime, string dateString)
+        public static DateTime ParseBritishDateFromAmericanDateString(this DateTime dateTime, string dateString, string sourceStringDateFormat)
         {
             DateTime toReturn = DateTime.MinValue;
             try
             {
-                DateTime dt = DateTime.ParseExact(dateString, "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                DateTime dt = DateTime.ParseExact(dateString, sourceStringDateFormat, CultureInfo.InvariantCulture);
                 string formattedDate = dt.ToString("dd/MM/yyyy");
                 toReturn = DateTime.Parse(formattedDate, new CultureInfo("en-GB"));
                 return toReturn;
@@ -56,8 +57,9 @@ namespace DotNetLibrary.Utilities.Tools.Extensions
         /// </summary>
         /// <param name="dateTime">The type we are extending with this method</param>
         /// <param name="dateString">The string to parse in order to build the date</param>
+        /// <param name="sourceStringDateFormat">The date format of the string to be parsed e.g. MM/dd/yy or MM-dd-yy</param>
         /// <returns>A nullable DateTime instance</returns>
-        public static DateTime ParseBritishDateFromShortAmericanDateString(this DateTime dateTime, string dateString)
+        public static DateTime ParseBritishDateFromShortAmericanDateString(this DateTime dateTime, string dateString, string sourceStringDateFormat)
         {
             DateTime toReturn = DateTime.MinValue;
             try

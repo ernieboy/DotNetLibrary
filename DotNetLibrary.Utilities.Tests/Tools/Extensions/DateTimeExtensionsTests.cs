@@ -1,4 +1,5 @@
 ﻿using System;
+using DotNetLibrary.Utilities.Tools;
 using DotNetLibrary.Utilities.Tools.Extensions;
 using NUnit.Framework;
 
@@ -10,18 +11,27 @@ namespace DotNetLibrary.Utilities.Tests.Tools.Extensions
         public void ParseBritishDateFromShortAmericanDateStringTest()   
         {
             DateTime parsed = DateTime.MinValue;
-            parsed = parsed.ParseBritishDateFromShortAmericanDateString("11/19/08");
+            parsed = parsed.ParseBritishDateFromShortAmericanDateString("11/19/08", DateFormat.AmericanTwoDigitsYearWithSlashSparator);
             Assert.That(parsed != DateTime.MinValue);
             Assert.That(parsed.Year, Is.EqualTo(2008));
         }
 
         [Test]
-        public void ParseBritishDateFromAmericanDateStringTest()
+        public void ParseBritishDateFromAmericanDateStringTest1()
         {
             DateTime parsed = DateTime.MinValue;
-            parsed = parsed.ParseBritishDateFromAmericanDateString("11/19/2008");
+            parsed = parsed.ParseBritishDateFromAmericanDateString("11/19/2008", DateFormat.AmericanFourDigitsYearWithSlashSparator);
             Assert.That(parsed != DateTime.MinValue);
             Assert.That(parsed.Year, Is.EqualTo(2008));
+        }
+
+        [Test]
+        public void ParseBritishDateFromAmericanDateStringTest2()
+        {
+            DateTime parsed = DateTime.MinValue;
+            parsed = parsed.ParseBritishDateFromAmericanDateString("05-18-1961", DateFormat.AmericanFourDigitsYearWithHyphenSparator);
+            Assert.That(parsed != DateTime.MinValue);
+            Assert.That(parsed.Year, Is.EqualTo(1961));
         }
 
         [Test]
